@@ -8,20 +8,13 @@
         <Authorized>
             <img src="img/user.svg" />
             <div>
-                <a href="authentication/profile" class="username">@context.User.Identity?.Name</a>
-                <button class="btn btn-link sign-out" @onclick="BeginSignOut">Sign out</button>
+                <a href="Identity/Account/Manage" class="username">@context.User.Identity?.Name</a>
+                <a href="Identity/Account/Logout" class="btn btn-link sign-out">Sign out</a>
             </div>
         </Authorized>
         <NotAuthorized>
-            <a class="sign-in" href="authentication/register">Register</a>
-            <a class="sign-in" href="authentication/login">Log in</a>
+            <a class="sign-in" href="Identity/Account/Register">Register</a>
+            <a class="sign-in" href="Identity/Account/Login">Log in</a>
         </NotAuthorized>
     </AuthorizeView>
 </div>
-
-@code {
-    void BeginSignOut()
-    {
-        Navigation.NavigateToLogout("authentication/logout");
-    }
-}

@@ -340,3 +340,5 @@ ASALocalRun/
 *.db-shm
 *.db-wal
 /save-points/08-templated-components/BlazingPizza.Client/BlazingPizza.Client.sln
+
+*.zip
